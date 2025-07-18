@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* suggestionbox */
+
+/* Hide scrollbars but retain scrolling functionality */
+.custom-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
+
+/* Optional: Add a smooth scrolling effect */
+.custom-scrollbar {
+  -webkit-overflow-scrolling: touch; /* Enable smooth scrolling for mobile */
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
