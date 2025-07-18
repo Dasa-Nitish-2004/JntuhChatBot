@@ -35,7 +35,10 @@ const SuggestionBox = ({ inputValue, setInputValue }) => {
     );
   }, [inputValue, suggestions]);
 
-
+  const toggleResponse = (index, e) => {
+    e.stopPropagation();
+    setExpandedSuggestion((prev) => (prev === index ? null : index));
+  };
 
   return (
     <div className="h-full">
@@ -71,7 +74,7 @@ const SuggestionBox = ({ inputValue, setInputValue }) => {
                   <span className="flex-grow text-white">{s.prompt}</span>
                   <button
                     className="ml-2 text-gray-400 hover:text-white"
-                    
+                    onClick={(e) => toggleResponse(i, e)}
                   >
                     {expandedSuggestion === i ? <FaAngleUp /> : <FaAngleDown />}
                   </button>

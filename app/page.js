@@ -19,6 +19,13 @@ export default function Home() {
         );
       }
 
+      if (line.trim().startsWith("* ")) {
+        return (
+          <li key={index} className="list-disc ml-5">
+            {line.replace("* ", "").trim()}
+          </li>
+        );
+      }
 
       return <p key={index}>{line}</p>;
     });
